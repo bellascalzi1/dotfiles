@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 
 # Symbolically links all my dotfiles to my config files in my gir repo.
 ln -sf ~/repos/dotfiles/.bash_profile ~/.bash_profile

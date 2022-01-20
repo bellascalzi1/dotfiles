@@ -41,7 +41,7 @@ fi
 unset rc
 
 # Set my prompt
-export PS1=$'\[\033[0;34m\]\u@\h \[\033[1;31m\]\w \[\033[0m\] \uf1eb \n$ '
+export PS1=$'\[\033[0;34m\]\u@\h \[\033[1;31m\]\w \[\033[0m\] \n$ '
 
 # Turn Vi Editing Mode on
 set -o vi
