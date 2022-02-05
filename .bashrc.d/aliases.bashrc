@@ -24,3 +24,9 @@ alias afk="i3lock"
 # Git aliases
 alias gc="git commit"
 alias ga="git add"
+alias gs="git status"
+
+# Easily navigate to and edit common files/directories
+alias i3config="vim $HOME/.config/i3/config"
+alias ..="cd .."
+alias dotfiles="cd $HOME/repos/dotfiles"

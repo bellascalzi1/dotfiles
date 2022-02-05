@@ -22,6 +22,9 @@ font pango:Iosevka Nerd Font 14
 # Make it so that the focused window does not follow the mouse
 focus_follows_mouse no
 
+# Set Desktop Background
+exec --no-startup-id feh --no-fehbg --bg-fill '/home/isabella/images/25KaekU.jpg'
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -43,6 +46,21 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use Flameshot as the Print Screen
 bindsym Print exec flameshot gui
 
+# Power Menu
+set $mode_system System (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+p mode "$mode_system"
+
+# Lock the Screen on Mod+Backspace
+bindsym $mod+BackSpace exec --no-startup-id i3lock
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
