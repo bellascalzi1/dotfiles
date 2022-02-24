@@ -40,8 +40,13 @@ fi
 
 unset rc
 
+# Set variables for git PS1 script
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+
 # Set my prompt
-export PS1=$'\[\033[0;34m\]\u@\h \[\033[1;31m\]\w \[\033[0m\] \n$ '
+export PS1=$'\[\033[0;34m\]\u@\h \[\033[1;31m\]\w \[\033[33;1m\]$(__git_ps1 "(%s)")\[\033[0m\] \n$ '
 
 # Turn Vi Editing Mode on
 set -o vi
